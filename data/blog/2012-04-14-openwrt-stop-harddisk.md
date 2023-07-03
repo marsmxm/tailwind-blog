@@ -43,7 +43,7 @@ fi
 exit 0
 ```
 
-for 循环是判断在 10s 内对硬盘是否有存取操作，如果没有就认为空闲。其中的 awk '{print $(NF-2)}'是打印出倒数第三列，NF=number of fields。
+for 循环是判断在 10s 内对硬盘是否有存取操作，如果没有就认为空闲。其中的`awk '{print $(NF-2)}'`是打印出倒数第三列，NF=number of fields。
 接下来还需要建立一个周期任务来执行这个脚本。OpenWRT 下 root 用户的 crontab 是/etc/crontabs/root 这个文件。加入如下这行：
 
 ```bash
